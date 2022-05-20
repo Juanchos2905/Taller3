@@ -36,7 +36,7 @@ Algoritmo T3P4
 	FinPara
 	
 	Escribir "El dinero obtenido por PSE el día de hoy fue: ", acumPSE
-	Escribir "El dinero obtenido por PSE el día de hoy fue: ", acumTarj
+	Escribir "El dinero obtenido por Tarjeta de crédito el día de hoy fue: ", acumTarj
 	Escribir "EL dinero total fue de: ", (acumPSE + acumTarj)
 	
 	si contTarj == contPSE
