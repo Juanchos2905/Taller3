@@ -34,23 +34,11 @@ Algoritmo T3P6
 		Dimension vec2(tamA)
 		Dimension vec3(tamA)
 		
-		//Inicialización de los arreglos CON ENFASIS EN EL MAYOR
+		//Inicialización de los arreglos
 		para j=0 hasta (tamA - 1) Con Paso 1
 			vec1[j] = 0
 			vec2[j] = 0
 			vec3[j] = 0
-		FinPara
-		
-		
-		para j=0 Hasta (tamaB - 1) con paso 1
-			vec1[j] = (vecA[j] + VecB[j])
-		FinPara
-		para j=0 Hasta (tamaB - 1) con paso 1
-			vec1[j] = (vecA[j] * VecB[j])
-		FinPara
-		
-		para j=0 Hasta (tamaB - 1) con paso 1
-			vec1[j] = ((vecA[j] * vecA[j]) + (VecB[j] * VecB[j]))
 		FinPara
 		
 		//imprimir los vectores A y B
@@ -64,16 +52,35 @@ Algoritmo T3P6
 		
 		para j=0 Hasta (tamB - 1) con paso 1
 			vec1[j] = (vecA[j] + VecB[j])
+		FinPara
+		
+		para j=0 hasta (tamA - 1) con paso 1
+			si vec1[j] == 0 y vecA[j] <> 0 Entonces
+				vec1[j] = vecA[j]
+			FinSi
 			Escribir "VECTOR CON SUMA DE LOS DOS VECTORES: [", vec1[j], "]"
 		FinPara
 		
+		
 		para j=0 Hasta (tamB - 1) con paso 1
 			vec2[j] = (vecA[j] * VecB[j])
+		FinPara
+		
+		para j=0 hasta (tamA - 1) con paso 1
+			si vec2[j] == 0 y vecA[j] <> 0 Entonces
+				vec2[j] = vecA[j]
+			FinSi
 			Escribir "VECTOR CON EL PRODUCTO DE LOS DOS VECTORES: [", vec2[j], "]"
 		FinPara
 		
 		para j=0 Hasta (tamB - 1) con paso 1
 			vec3[j] = ((vecA[j] * vecA[j]) + (VecB[j] * VecB[j]))
+		FinPara
+		
+		para j=0 hasta (tamA - 1) con paso 1
+			si vec3[j] == 0 y vecA[j] <> 0 Entonces
+				vec3[j] = vecA[j] * vecA[j]
+			FinSi
 			Escribir "VECTOR CON LA SUMA DE SUS CUADRADOS: [", vec3[j], "]"
 		FinPara
 		
@@ -84,12 +91,7 @@ Algoritmo T3P6
 			Dimension vec2(tamB)
 			Dimension vec3(tamB)
 			
-			//Inicialización de los arreglos CON ENFASIS EN EL MAYOR
-			para j=0 hasta (tamaB - 1) Con Paso 1
-				vec1[j] = VecB[j]
-				vec2[j] = VecB[j]
-				vec3[j] = VecB[j]
-			FinPara
+
 			//imprimir los vectores A y B
 			para k=0 Hasta (tamA - 1) con paso 1
 				Escribir "VECTOR A: [", vecA[k], "]"
@@ -99,18 +101,44 @@ Algoritmo T3P6
 				Escribir "VECTOR B: [", vecB[k], "]"
 			FinPara
 			
-			para j=0 Hasta (tamA - 1) con paso 1
-				vec1[j] = (vecA[j] + VecB[j])
-				Escribir "VECTOR CON SUMA DE LOS DOS VECTORES: [", vec1[j], "]"
+			//Inicialización de los arreglos
+			para N=0 hasta (tamB - 1) Con Paso 1
+				vec1[N] = 0
+				vec2[N] = 0
+				vec3[N] = 0
 			FinPara
 			
 			para j=0 Hasta (tamA - 1) con paso 1
+				vec1[j] = (vecA[j] + VecB[j])
+			FinPara
+			
+			para j=0 hasta (tamB - 1) con paso 1
+				si vec1[j] == 0 y vecA[j] <> 0 Entonces
+					vec1[j] = vecA[j]
+				FinSi
+				Escribir "VECTOR CON SUMA DE LOS DOS VECTORES: [", vec1[j], "]"
+			FinPara
+			
+			
+			para j=0 Hasta (tamA - 1) con paso 1
 				vec2[j] = (vecA[j] * VecB[j])
+			FinPara
+			
+			para j=0 hasta (tamB - 1) con paso 1
+				si vec2[j] == 0 y vecA[j] <> 0 Entonces
+					vec2[j] = vecA[j]
+				FinSi
 				Escribir "VECTOR CON EL PRODUCTO DE LOS DOS VECTORES: [", vec2[j], "]"
 			FinPara
 			
 			para j=0 Hasta (tamA - 1) con paso 1
 				vec3[j] = ((vecA[j] * vecA[j]) + (VecB[j] * VecB[j]))
+			FinPara
+			
+			para j=0 hasta (tamB - 1) con paso 1
+				si vec3[j] == 0 y vecA[j] <> 0 Entonces
+					vec3[j] = vecA[j] * vecA[j]
+				FinSi
 				Escribir "VECTOR CON LA SUMA DE SUS CUADRADOS: [", vec3[j], "]"
 			FinPara
 		FinSi
