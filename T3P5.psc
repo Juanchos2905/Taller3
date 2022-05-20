@@ -28,7 +28,7 @@ Algoritmo T3P5
 	FinMientras
 	
 	
-	Escribir "El capital final es de: $", (capiFinal)
+	Escribir "El capital final es de:  $", (capiFinal)
 FinAlgoritmo
 
 
