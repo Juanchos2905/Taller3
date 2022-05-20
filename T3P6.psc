@@ -29,6 +29,7 @@ Algoritmo T3P6
 		VecB[i] = num
 	FinPara
 	
+	//condicion cuando A es mayor que B
 	si tamA >= tamB
 		Dimension vec1(tamA)
 		Dimension vec2(tamA)
@@ -91,7 +92,13 @@ Algoritmo T3P6
 			Dimension vec2(tamB)
 			Dimension vec3(tamB)
 			
-
+			//Inicialización de los arreglos
+			para j=0 hasta (tamB - 1) Con Paso 1
+				vec1[j] = 0
+				vec2[j] = 0
+				vec3[j] = 0
+			FinPara
+			
 			//imprimir los vectores A y B
 			para k=0 Hasta (tamA - 1) con paso 1
 				Escribir "VECTOR A: [", vecA[k], "]"
@@ -99,13 +106,6 @@ Algoritmo T3P6
 			
 			para k=0 Hasta (tamB - 1) con paso 1
 				Escribir "VECTOR B: [", vecB[k], "]"
-			FinPara
-			
-			//Inicialización de los arreglos
-			para N=0 hasta (tamB - 1) Con Paso 1
-				vec1[N] = 0
-				vec2[N] = 0
-				vec3[N] = 0
 			FinPara
 			
 			para j=0 Hasta (tamA - 1) con paso 1
@@ -143,9 +143,9 @@ Algoritmo T3P6
 			FinPara
 		FinSi
 	FinSi
-
 	
 	
 	
-
+	
+	
 FinAlgoritmo
