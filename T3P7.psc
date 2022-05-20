@@ -17,7 +17,7 @@ Algoritmo T3P7
 				Escribir "Se le aplicará la vacuna tipo A "
 			sino
 				si edad < 16
-					Escribir "Se le aplicará la vacuna tipo A "
+					Escribir "Se le aplicará la vacuna tipo A  "
 				FinSi
 			FinSi
 		FinSi
