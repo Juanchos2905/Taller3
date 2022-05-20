@@ -51,9 +51,6 @@ Algoritmo T3P2
 			Escribir "Total a pagar con IVA: ", precio-(precio*0.03) + ((precio-(precio*0.03))*0.19)
 		
 	FinSegun
-	
-	
-	
 FinAlgoritmo
 
 
