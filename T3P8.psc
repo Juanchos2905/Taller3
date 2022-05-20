@@ -35,7 +35,7 @@ Algoritmo T3P8
 		leer metodoPago
 		
 		si metodoPago < 1 o metodoPago > 2 Entonces
-			escribir "Ingrese un número valido."
+			escribir "Ingrese un número valido. "
 		FinSi
 	mientras que metodoPago < 1 o metodoPago > 2
 	
